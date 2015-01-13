@@ -30,3 +30,9 @@ You can also run `c2s` directly:
 ```sh
 docker run -it --rm c2s c2s
 ```
+
+## TODO
+
+* provide easy access to files on the host (volumes, etc.)
+* make the image available on Docker Hub
+* …
