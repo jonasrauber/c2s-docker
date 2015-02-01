@@ -34,8 +34,3 @@ c2s predict data.mat predictions.mat
 
 The only difference is that `c2s` can only access files in your current working directory and its subdirectories.
 
-## TODO
-
-* ~~provide easy access to files on the host (volumes, etc.)~~
-* make the image available on Docker Hub
-* …
