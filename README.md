@@ -5,17 +5,10 @@ It is currently not available on Docker Hub but it can be used using the followi
 
 ## How to use
 
-After installing [Docker](https://www.docker.com/), clone this repository:
+After installing [Docker](https://www.docker.com/), you can build the `c2s` Docker image. The whole build process may take some time.
 
 ```sh
-git clone https://github.com/jonasrauber/c2s-docker.git
-```
-
-Then build the Docker image. The new image will be called `c2s`. The whole build process may take some time.
-
-```sh
-cd c2s-docker
-docker build --rm -t jonasrauber/c2s .
+docker build --rm -t jonasrauber/c2s https://github.com/jonasrauber/c2s-docker.git
 ```
 
 You can then run `c2s` by running a container based on the new image:
@@ -24,7 +17,7 @@ You can then run `c2s` by running a container based on the new image:
 docker run -it --rm -v $PWD:/data/workdir jonasrauber/c2s`
 ```
 
-Because of the `-v $PWD:/data/workdir` parameter, `c2s` has access to all files in the current working directory and its subdirectories.
+The `-v $PWD:/data/workdir` parameter provides `c2s` with access to all files in the current working directory and its subdirectories.
 
 ## TODO
 
