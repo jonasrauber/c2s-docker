@@ -11,13 +11,25 @@ After installing [Docker](https://www.docker.com/), you can build the `c2s` Dock
 docker build --rm -t jonasrauber/c2s https://github.com/jonasrauber/c2s-docker.git
 ```
 
-You can then run `c2s` by running a container based on the new image:
+To simplify running `c2s` in a Docker container, create an alias:
 
 ```sh
-docker run -it --rm -v $PWD:/data/workdir jonasrauber/c2s`
+alias c2s='docker run -it --rm -v $PWD:/data/workdir jonasrauber/c2s'
 ```
 
-The `-v $PWD:/data/workdir` parameter provides `c2s` with access to all files in the current working directory and its subdirectories.
+This creates a temporary alias. In order to make it persistent, just append this line to your `~/.bashrc`, `~/.zshrc` or similar files. This can be done like this:
+
+```
+alias c2s >> ~/.bashrc
+```
+
+You can then use `c2s` as if it would be installed on the host:
+
+```
+c2s predict data.mat predictions.mat
+```
+
+The only difference is that `c2s` can only access files in your current working directory and its subdirectories.
 
 ## TODO
 
