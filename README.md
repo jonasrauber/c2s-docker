@@ -26,3 +26,8 @@ docker run -it --rm -v $PWD:/data/workdir jonasrauber/c2s`
 
 Because of the `-v $PWD:/data/workdir` parameter, `c2s` has access to all files in the current working directory and its subdirectories.
 
+## TODO
+
+* ~~provide easy access to files on the host (volumes, etc.)~~
+* make the image available on Docker Hub
+* …
