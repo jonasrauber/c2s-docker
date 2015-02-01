@@ -33,3 +33,7 @@ RUN \
 RUN \
   pip install cython && \
   pip install git+https://github.com/lucastheis/c2s.git
+
+VOLUME /data/workdir
+WORKDIR /data/workdir
+ENTRYPOINT ["c2s"]

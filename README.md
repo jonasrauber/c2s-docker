@@ -15,18 +15,14 @@ Then build the Docker image. The new image will be called `c2s`. The whole build
 
 ```sh
 cd c2s-docker
-docker build --tag="c2s" --rm=true .
+docker build --rm -t jonasrauber/c2s .
 ```
 
-You can then run a container based on the new image:
+You can then run `c2s` by running a container based on the new image:
 
 ```sh
-docker run -it --rm c2s
+docker run -it --rm -v $PWD:/data/workdir jonasrauber/c2s`
 ```
 
-By default, this starts `bash` from which you should be able to run `c2s`.
-You can also run `c2s` directly:
+Because of the `-v $PWD:/data/workdir` parameter, `c2s` has access to all files in the current working directory and its subdirectories.
 
-```sh
-docker run -it --rm c2s c2s
-```
