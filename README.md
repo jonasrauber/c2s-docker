@@ -21,6 +21,8 @@ This creates a temporary alias. In order to make it persistent, just append this
 
 ```
 alias c2s >> ~/.bashrc
+# or
+alias c2s >> ~/.zshrc
 ```
 
 You can then use `c2s` as if it would be installed on the host:
