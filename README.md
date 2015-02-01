@@ -1,11 +1,15 @@
 # c2s-docker
-This repository provides a Dockerfile for the [c2s toolbox](https://github.com/lucastheis/c2s).
-
-It is currently not available on Docker Hub but it can be used using the following commands.
+Dockerfile for the [c2s toolbox](https://github.com/lucastheis/c2s)
 
 ## How to use
 
-After installing [Docker](https://www.docker.com/), you can build the `c2s` Docker image. The whole build process may take some time.
+After installing [Docker](https://www.docker.com/), get the `c2s` Docker image:
+
+```
+docker pull jonasrauber/c2s
+```
+
+Alternatively, you can build the image yourself, however the build process may take some time.
 
 ```sh
 docker build --rm -t jonasrauber/c2s https://github.com/jonasrauber/c2s-docker.git
@@ -22,7 +26,7 @@ This creates a temporary alias. In order to make it persistent, just append this
 ```sh
 alias c2s >> ~/.bashrc
 
-# or if you are using zsh:
+# or if you are using zsh
 alias -L c2s >> ~/.zshrc
 ```
 
