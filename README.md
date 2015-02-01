@@ -19,7 +19,7 @@ alias c2s='docker run -it --rm -v $PWD:/data/workdir jonasrauber/c2s'
 
 This creates a temporary alias. In order to make it persistent, just append this line to your `~/.bashrc`, `~/.zshrc` or similar files. This can be done like this:
 
-```
+```sh
 alias c2s >> ~/.bashrc
 # or
 alias c2s >> ~/.zshrc
@@ -27,7 +27,7 @@ alias c2s >> ~/.zshrc
 
 You can then use `c2s` as if it would be installed on the host:
 
-```
+```sh
 c2s predict data.mat predictions.mat
 ```
 
