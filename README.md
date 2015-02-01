@@ -21,12 +21,15 @@ To simplify running `c2s` in a Docker container, create an alias:
 alias c2s='docker run -it --rm -v $PWD:/data/workdir jonasrauber/c2s'
 ```
 
-This creates a temporary alias. In order to make it persistent, just append this line to your `~/.bashrc`, `~/.zshrc` or similar files. This can be done like this:
+This creates a temporary alias. In order to make it persistent, just append this line to your `~/.bashrc`, `~/.zshrc` or similar files. If you are using `bash`, this can be done like this:
 
-```sh
+```bash
 alias c2s >> ~/.bashrc
+```
 
-# or if you are using zsh
+If you are using `zsh`, use this instead:
+
+```zsh
 alias -L c2s >> ~/.zshrc
 ```
 
