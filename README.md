@@ -41,3 +41,5 @@ c2s predict data.mat predictions.mat
 
 The only difference is that `c2s` can only access files in your current working directory and its subdirectories.
 
+To get more information on `c2s` itself, have a look at the [c2s repository](https://github.com/lucastheis/c2s) and the [c2s documentaiton](http://c2s.readthedocs.org/en/latest/).
+
