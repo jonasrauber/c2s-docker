@@ -3,6 +3,8 @@ Dockerfile for the [c2s toolbox](https://github.com/lucastheis/c2s)
 
 ## How to use
 
+*Please note that you might need to prefix all docker commands with `sudo` depending on your docker setup.*
+
 After installing [Docker](https://www.docker.com/), get the `c2s` Docker image:
 
 ```
