@@ -1,5 +1,7 @@
 # c2s-docker
-Dockerfile for the [c2s toolbox](https://github.com/lucastheis/c2s)
+Dockerfile for the [c2s toolbox](https://github.com/lucastheis/c2s).
+
+If you need IPython, consider [c2s-ipython-docker](https://github.com/jonasrauber/c2s-ipython-docker) instead.
 
 ## How to use
 
