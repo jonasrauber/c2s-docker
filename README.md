@@ -24,7 +24,7 @@ docker build --rm -t jonasrauber/c2s https://github.com/jonasrauber/c2s-docker.g
 To simplify running `c2s` in a Docker container, create an alias:
 
 ```sh
-alias c2s='docker run -it --rm -v $PWD:/data/workdir jonasrauber/c2s'
+alias c2s='docker run -it --rm -v "$PWD:/data/workdir" jonasrauber/c2s'
 ```
 
 This creates a temporary alias. In order to make it persistent, just append this line to your `~/.bashrc`, `~/.zshrc` or similar files. If you are using `bash`, this can be done like this:
