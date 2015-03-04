@@ -49,3 +49,17 @@ The only difference is that `c2s` can only access files in your current working 
 
 To get more information on `c2s` itself, have a look at the [c2s repository](https://github.com/lucastheis/c2s) and the [c2s documentaiton](http://c2s.readthedocs.org/en/latest/).
 
+### c2s visualize workaround
+
+`c2s visualize` from within a Docker container requires a workaround as described in [issue #3](https://github.com/jonasrauber/c2s-docker/issues/3).
+
+The following steps work on OS X:
+
+```sh
+brew install socat
+socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
+# in another window
+docker run -it --rm -e DISPLAY=192.168.1.2:0 -v $PWD:/data/workdir jonasrauber/c2s visualize data.0.mat
+```
+The ip address 192.168.1.2 needs to be replaced with the respective host ip (i.e. the ip of OS X).
+
