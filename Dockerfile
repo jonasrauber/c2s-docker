@@ -1,13 +1,13 @@
-FROM python:2
+FROM python:2-onbuild
 
 MAINTAINER Jonas Rauber
 
-RUN \
-  apt-get update && \
-  apt-get install -y -q \
-    python-numpy \
-    python-scipy \
-    python-matplotlib
+#RUN \
+#  apt-get update && \
+#  apt-get install -y -q \
+#    python-numpy \
+#    python-scipy \
+#    python-matplotlib
 
 RUN \
   apt-get update && \
