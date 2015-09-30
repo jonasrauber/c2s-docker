@@ -1,4 +1,4 @@
-FROM python:2-onbuild
+FROM python:2
 
 MAINTAINER Jonas Rauber
 
