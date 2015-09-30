@@ -1,4 +1,4 @@
-FROM dockerfile/python
+FROM python:2-onbuild
 
 MAINTAINER Jonas Rauber
 
