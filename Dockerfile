@@ -1,10 +1,21 @@
-FROM dockerfile/python
+FROM ubuntu:14.04
 
 MAINTAINER Jonas Rauber
+
+WORKDIR /data
 
 RUN \
   apt-get update && \
   apt-get install -y -q \
+    build-essential \
+    git
+
+RUN \
+  apt-get update && \
+  apt-get install -y -q \
+    python \
+    cython \
+    python-pip \
     python-numpy \
     python-scipy \
     python-matplotlib
@@ -31,7 +42,6 @@ RUN \
   python setup.py install
 
 RUN \
-  pip install cython && \
   pip install git+https://github.com/lucastheis/c2s.git
 
 VOLUME /data/workdir
